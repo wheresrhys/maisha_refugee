@@ -1,0 +1,4 @@
+ - Disable comments plugin - set to 'Everything'
+ - Disable emoji plugin
+ - Disable sidebar plugin
+ - Disable soliloquy and soliloquy instagram plugins
