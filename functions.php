@@ -242,16 +242,20 @@ endif;
  */
 function maisha_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'maisha-fonts', maisha_fonts_url(), array(), null );
+	// wp_enqueue_style( 'maisha-fonts', maisha_fonts_url(), array(), null );
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
 	// Load our main stylesheet.
 
 	wp_enqueue_style( 'maisha-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'chrispink-styles', get_template_directory_uri().'/css/chrispink.css' );
+	// wp_enqueue_style( 'chrispink-styles', get_template_directory_uri().'/css/chrispink.css' );
 
-
+  if( !is_admin()){
+	 	wp_deregister_script('jquery');
+	}
+	// wp_register_script();
+	wp_enqueue_script('jquery', get_stylesheet_directory_uri() . '/js/jquery.js', false, '1.12.4', true);
 	wp_enqueue_script( 'maisha-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
 	wp_enqueue_script( 'maisha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'maisha-search', get_template_directory_uri() . '/js/search.js', array( 'jquery' ), '1.0', true );
@@ -259,7 +263,7 @@ function maisha_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'maisha-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
+		wp_enqueue_script( 'maisha-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' , true);
 	}
 	if ( is_page_template( 'page-templates/front-page.php' )) {
 	wp_enqueue_script( 'maisha-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '1.0', true );
@@ -270,6 +274,8 @@ function maisha_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'maisha_scripts' );
+
+
 /**
  * Add featured image as background image to post navigation elements.
  *
