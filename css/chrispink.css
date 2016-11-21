@@ -1,0 +1,76 @@
+/* Chris's code */
+
+.wpcf7 p {
+  margin: 0;
+}
+
+fieldset {
+  background: #c8cab9 none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px 4px;
+  margin: 20px 0;
+}
+
+
+legend {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 30px;
+  padding: 0 30px;
+  border: 1px solid #ccc;
+}
+
+.grid-header {
+  font-size: 30px;
+  font-weight: 200;
+  margin: 30px 0 0;
+}
+
+
+
+
+ .page .main {
+	 padding: 0 0 8.3333% 0;
+ }
+ 
+ .features .main {
+	 padding: 1% 0;
+ }
+
+.secondary {
+	display: none;
+}
+
+.sidebar .widget {
+	background: #f5f4f4;
+	padding: 30px 5%;
+}
+
+.secondary.toggled-on {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	display: block;
+}
+
+.widget-area {
+	margin: 9.09090% auto 0;
+}
+
+.error-404 {
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width:480px) {
+	
+.big-button {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+	
+	
+}
