@@ -2,7 +2,6 @@
 /**
  * Template Name:  Page with Heroes
  *
-
  *
  * @package Maisha
  * @since Maisha 1.0
@@ -12,13 +11,13 @@ get_header(); ?>
 	<div class="aboutpage">
 	<?php if ( has_post_thumbnail() ): ?>
 		<?php $image_id = get_post_thumbnail_id(); ?>
-		<?php $image_url = wp_get_attachment_image_src($image_id,'full');   ?>
-		<div class="cd-fixed-bg-one cd-bg-1" style="background-image:url(<?php echo esc_url( $image_url[0] ); ?>);">
-		<div class="entry-content">
+
+		<div class="cd-fixed-bg-one cd-bg-1 rhys-banner">
+		<div class="entry-content rhys-banner-content">
 			<h1><?php the_title(); ?></h1>
 			<hr class="short">
 		</div>
-		<span class="overlay"></span>
+		<?php echo wp_get_attachment_image($image_id, 2000); ?>
 		</div>
 	<?php endif; ?>
 	</div>
