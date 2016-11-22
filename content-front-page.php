@@ -8,12 +8,12 @@
 ?>
 	<div class="homepage">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="cd-fixed-bg cd-bg-1 rhys-banner">
 			<?php $image_id = get_post_thumbnail_id(); ?>
-			<?php $image_url = wp_get_attachment_image_src($image_id,'full');   ?>
-			<div class="cd-fixed-bg cd-bg-1" style="background-image:url(<?php echo esc_url( $image_url[0] ); ?>);"></div>
+			<?php echo wp_get_attachment_image($image_id, 2000); ?>
 			<?php if($post->post_content=="") : ?>
 			<?php else : ?>
-			<div class="content-caption">
+			<div class="content-caption rhys-banner-content">
 				<div class="entry-content">
 					<div class="cd-main-content">
 					<?php the_content(); ?>
@@ -55,5 +55,6 @@
 				</div><!-- .entry-content -->
 			</div><!-- .content-caption -->
 			<?php endif; ?>
+			</div>
 		</article><!-- #post-## -->
 	</div><!-- .homepage -->
