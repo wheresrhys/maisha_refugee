@@ -9,10 +9,8 @@
 	<div class="aboutpage">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php if ( has_post_thumbnail() ): ?>
-			<?php $image_id = get_post_thumbnail_id(); ?>
-			<?php $image_url = wp_get_attachment_image_src($image_id,'full');   ?>
-			<div class="cd-fixed-bg-one cd-bg-1" style="background-image:url(<?php echo esc_url( $image_url[0] ); ?>);">
-			<div class="entry-content">
+			<div class="cd-fixed-bg-one cd-bg-1 rhys-banner">
+			<div class="entry-content rhys-banner-content">
 				<h1><?php the_title(); ?></h1>
 				<hr class="short">
 				<?php the_content(); ?>
@@ -27,7 +25,8 @@
 					) );
 				?>
 			</div>
-			<span class="overlay"></span>
+			<?php $image_id = get_post_thumbnail_id(); ?>
+			<?php echo wp_get_attachment_image($image_id, 'full'); ?>
 			</div>
 			<?php else: ?>
 			<div class="cd-fixed-bg-one withoutimg">
