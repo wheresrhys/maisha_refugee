@@ -8977,7 +8977,7 @@ legend {
   z-index: 0;
   content: '';
   display: block;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,.6);
   opacity: .3;
 }
 

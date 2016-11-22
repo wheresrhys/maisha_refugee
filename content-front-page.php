@@ -10,7 +10,7 @@
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="cd-fixed-bg cd-bg-1 rhys-banner">
 			<?php $image_id = get_post_thumbnail_id(); ?>
-			<?php echo wp_get_attachment_image($image_id, 2000); ?>
+			<?php echo wp_get_attachment_image($image_id, 'full'); ?>
 			<?php if($post->post_content=="") : ?>
 			<?php else : ?>
 			<div class="content-caption rhys-banner-content">

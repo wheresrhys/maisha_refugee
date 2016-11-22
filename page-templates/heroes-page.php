@@ -10,14 +10,13 @@
 get_header(); ?>
 	<div class="aboutpage">
 	<?php if ( has_post_thumbnail() ): ?>
-		<?php $image_id = get_post_thumbnail_id(); ?>
-
 		<div class="cd-fixed-bg-one cd-bg-1 rhys-banner">
 		<div class="entry-content rhys-banner-content">
 			<h1><?php the_title(); ?></h1>
 			<hr class="short">
 		</div>
-		<?php echo wp_get_attachment_image($image_id, 2000); ?>
+		<?php $image_id = get_post_thumbnail_id(); ?>
+		<?php echo wp_get_attachment_image($image_id, 'full'); ?>
 		</div>
 	<?php endif; ?>
 	</div>
