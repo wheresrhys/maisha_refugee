@@ -26,7 +26,7 @@
 				?>
 			</div>
 			<?php $image_id = get_post_thumbnail_id(); ?>
-			<?php echo wp_get_attachment_image($image_id, 'full'); ?>
+			<?php echo wp_get_attachment_image($image_id, 'full', false, array( "data-no-lazyload" => "" )); ?>
 			</div>
 			<?php else: ?>
 			<div class="cd-fixed-bg-one withoutimg">

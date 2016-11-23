@@ -12,7 +12,6 @@
  * @package Maisha
  * @since Maisha 1.0
  */
-
 get_header( 'custom' ); ?>
 	<div class="hfeed site">
 		<div class="content site-content">
