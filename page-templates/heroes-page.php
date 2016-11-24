@@ -10,8 +10,8 @@
 get_header(); ?>
 	<div class="aboutpage">
 	<?php if ( has_post_thumbnail() ): ?>
-		<div class="cd-fixed-bg-one cd-bg-1 rhys-banner">
-		<div class="entry-content rhys-banner-content">
+		<div class="cd-fixed-bg-one cd-bg-1 refugee-responsive">
+		<div class="entry-content refugee-responsive-content">
 			<h1><?php the_title(); ?></h1>
 			<hr class="short">
 		</div>

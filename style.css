@@ -8954,18 +8954,18 @@ legend {
 
 /* rhys evans styles */
 
-.rhys-banner {
+.refugee-responsive {
   position: relative;
   overflow: hidden;
 }
 
-.rhys-banner-content {
+.refugee-responsive-content {
   position: relative;
   z-index: 1;
 }
 
-.rhys-banner::after,
-.rhys-banner img {
+.refugee-responsive::after,
+.refugee-responsive img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -8973,7 +8973,7 @@ legend {
   left: 0;
 }
 
-.rhys-banner::after {
+.refugee-responsive::after {
   z-index: 0;
   content: '';
   display: block;
@@ -8981,32 +8981,32 @@ legend {
   opacity: .3;
 }
 
-.rhys-banner img {
+.refugee-responsive img {
   object-fit: cover;
 }
 
-.homepage .rhys-banner-content {
+.homepage .refugee-responsive-content {
 	top: 30%;
 	position: absolute;
 }
 
-.homepage .rhys-banner::after {
+.homepage .refugee-responsive::after {
 	display: none;
 }
 
 @media screen and (max-width: 48.75em) {
-	.homepage .rhys-banner-content {
+	.homepage .refugee-responsive-content {
 		position: static;
 	}
 
-	.homepage .rhys-banner img {
+	.homepage .refugee-responsive img {
 		position: static;
 	  min-height: 200px;
 		height: auto;
 		width: auto;
 	}
 
-	.homepage .rhys-banner::after {
+	.homepage .refugee-responsive::after {
 		display: none;
 	}
 }

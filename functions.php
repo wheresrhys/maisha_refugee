@@ -71,6 +71,8 @@ function maisha_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'list-thumbnail', 200, 200 );
 	add_image_size( 'projects-thumbnail', 150, 9999 );
+	add_image_size('mobile-banner', 400, 200, true );
+	add_image_size('wide-mobile-thumbnail', 450, 301);
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu',      'maisha' ),
