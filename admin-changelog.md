@@ -2,11 +2,7 @@
 
 
 
- - Added lazyload responsive plugin (need to disable for first image)
- - add on line 110     
-    if (isset($attr['data-no-lazyload'])) {
-        return $attr;
-    }
+
  - w3 total cache
  - Fast Velocity Minify
     - disable js minify
@@ -20,13 +16,23 @@ TODO
 - svg logo
 - video player
 
+TESTS
+before - https://www.webpagetest.org/result/161124_CG_5BF9/
+after - https://www.webpagetest.org/result/161124_WK_5CMX/
+
 STEPS
 
 - Copy maisha_refugee DB entry
 - Copy maisha_refugee theme
 - Install all required plugins
  - Disable comments plugin - set to 'Everything'
- - disable anti spam plugin
+ - disable WP-SpamShield plugin
  - Disable emoji plugin
  - Disable sidebar plugin
  - Disable soliloquy and soliloquy instagram plugins
+ - enable theme
+ - Added lazyload responsive plugin (need to disable for first image)
+ - add on line 110     
+    if (isset($attr['data-no-lazyload'])) {
+        return $attr;
+    }

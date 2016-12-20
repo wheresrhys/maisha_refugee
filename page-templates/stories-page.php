@@ -21,7 +21,7 @@ get_header(); ?>
 	endwhile;
 	?>
 	<div class="child-pages columns clear">
- 
+
 		<?php
 			$child_pages = new WP_Query( array(
 				'post_type'      => 'page',
@@ -71,10 +71,9 @@ get_header(); ?>
 	// End the loop.
 	endwhile;
 	?>
-    <? if (is_page('stories-2') )  { ?>
-   <h2 class="grid-header"> Refugee&rsquo;s Stories </h2>
+
 	<div class="child-pages columns clear">
-   
+
 		<?php
 			$child_pages = new WP_Query( array(
 				'post_type'      => 'page',
@@ -90,25 +89,7 @@ get_header(); ?>
 			wp_reset_postdata();
 		?>
 	</div>
-    <? } else { ?>
-    <h2 class="grid-header"> Volunteers&rsquo; Stories </h2>
-    <div class="child-pages columns clear">
-    	<?php
-			$child_pages = new WP_Query( array(
-				'post_type'      => 'page',
-				'orderby'        => 'menu_order',
-				'order'          => 'ASC',
-				'post_parent'    => '547',
-				'posts_per_page' => 999,
-				'no_found_rows'  => true,
-			) );
-			while ( $child_pages->have_posts() ) : $child_pages->the_post();
-				 get_template_part( 'content', 'grid-projects-one' );
-			endwhile;
-			wp_reset_postdata();
-		?>
-	</div>
-    <? } ?>
+
 	<!-- .child-pages -->
 	<?php endif; ?>
 <?php get_footer(); ?>
