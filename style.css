@@ -8994,9 +8994,26 @@ legend {
 	display: none;
 }
 
+@media screen and (max-width: 30em) {
+	.homepage .refugee-responsive-content {
+		position: static;
+		padding: 20px;
+	}
+}
+
 @media screen and (max-width: 48.75em) {
 	.homepage .refugee-responsive-content {
 		position: static;
+	}
+
+	.homepage .refugee-responsive-content h1 {
+	  position: absolute;
+	  top: 70px;
+	  background: rgba(0,0,0,0.6);
+	  padding: 10px;
+	  left: 10px;
+	  float: left;
+	  width: 215px;
 	}
 
 	.homepage .refugee-responsive img {
