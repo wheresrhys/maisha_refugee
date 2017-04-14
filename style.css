@@ -2279,6 +2279,8 @@ a.post-thumbnail:focus {
 	padding: 5px 10px;
 }
 
+
+
 a.more-link {
 	display: inline-block;
 	color: #333;
@@ -2768,6 +2770,19 @@ a.more-link {
 .page-template-front-page .entry-content a,
 .entry-content a.button {
 	border-bottom: none;
+}
+
+.entry-content a.button {
+	margin-left: 10px;
+}
+@media screen and (min-width: 38.75em) {
+	.entry-content a.button {
+		margin-left: 20px;
+	}
+}
+
+.entry-content p {
+	margin-bottom: 15px;
 }
 
 .news span.date,
@@ -8846,7 +8861,8 @@ p > video {
 
 @media screen and (max-width: 38.75em) {
 	.header-inner {
-		padding: 15px 20px;
+		padding: 5px 10px;
+		min-height: 0;
 	}
 	.aboutpage .cd-fixed-bg-one h1,
 	.page-template-full-width-page .themes-intro .entry-content h1 {
@@ -8996,7 +9012,7 @@ legend {
 @media screen and (max-width: 30em) {
 	.homepage .refugee-responsive-content {
 		position: static;
-		padding: 20px;
+		padding: 15px 20px;
 	}
 }
 
