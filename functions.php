@@ -47,6 +47,7 @@ if ( ! function_exists( 'maisha_setup' ) ) :
  * @since Maisha 1.0
  */
 function maisha_setup() {
+	add_filter('show_admin_bar', '__return_false');
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
